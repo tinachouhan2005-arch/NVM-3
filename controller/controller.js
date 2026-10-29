@@ -62,12 +62,14 @@ function createPost(req,res){
     }catch(err){
         res.status(500).json({
             success:false,
-            
+            msg:'Network Error',
+            err:err.message
         })
     }
 }
 
 module.exports={
     fetchPost,
-    singlePost
+    singlePost,
+    createPost
 }
